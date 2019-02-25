@@ -43,4 +43,4 @@ cmake -G "Visual Studio 15"
 
 ## Screenshot
 
-![point.cpp](./screenshot/Screenshot from 2019-02-25 16-54-53.png)
+![image](./screenshot/Screenshot%20from%202019-02-25%2016-54-53.png?raw=true)
