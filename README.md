@@ -9,6 +9,7 @@
 
 * basic 基础
   * `point.cpp` 一个点
+  * `lineandshape.cpp` 利用**opengl的API**画线和三角形,四边形等
 
 ## Build
 
@@ -44,3 +45,6 @@ cmake -G "Visual Studio 15"
 ## Screenshot
 
 ![image](./screenshot/Screenshot%20from%202019-02-25%2016-54-53.png?raw=true)
+画点(point.cpp)
+![image](./screenshot/Screenshot%20from%202019-02-25%2021-30-31.png?raw=true)
+画图形(lineandshape.cpp)
