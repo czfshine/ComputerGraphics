@@ -77,24 +77,25 @@ void line() {
     glEnd();
 }
 
-float margin=0.1;
-int row=3;
-int col=3;
+float margin = 0.1;
+int row = 3;
+int col = 3;
+
 /**
  * 绘制格子3*3的绿色格子
  */
-void grid(){
+void grid() {
 
     glLineWidth(4.0f); //线宽
-    glColor3f(0.f,0.5f,0.0f); //画笔颜色
+    glColor3f(0.f, 0.5f, 0.0f); //画笔颜色
     glBegin(GL_LINES); //画线
-    for(int i=0;i<=row;i++){
-        glVertex2f(margin-1,(1.0-margin)- i*((2.0-2.0*margin)/row));//起点
-        glVertex2f(1-margin,(1.0-margin)- i*((2.0-2.0*margin)/row));//终点
+    for (int i = 0; i <= row; i++) {
+        glVertex2f(margin - 1, (1.0 - margin) - i * ((2.0 - 2.0 * margin) / row));//起点
+        glVertex2f(1 - margin, (1.0 - margin) - i * ((2.0 - 2.0 * margin) / row));//终点
     }
-    for(int i=0;i<=col;i++){
-        glVertex2f((1.0-margin)- i*((2.0-2.0*margin)/col),margin-1);
-        glVertex2f((1.0-margin)- i*((2.0-2.0*margin)/col),1-margin);
+    for (int i = 0; i <= col; i++) {
+        glVertex2f((1.0 - margin) - i * ((2.0 - 2.0 * margin) / col), margin - 1);
+        glVertex2f((1.0 - margin) - i * ((2.0 - 2.0 * margin) / col), 1 - margin);
     }
     glEnd();
 }
@@ -102,12 +103,12 @@ void grid(){
 /**
  * 三角形
  */
-void triangles(){
+void triangles() {
     glLineWidth(4.0f); //线宽
 
     //1.三个点一个三角形
     glBegin(GL_TRIANGLES);
-    glColor3f(0.f,0.5f,0.5f); //画笔颜色
+    glColor3f(0.f, 0.5f, 0.5f); //画笔颜色
 
     glVertex2f(-0.2f, 0.85f);//A
     glVertex2f(-0.1f, 0.75f);//B
@@ -121,7 +122,7 @@ void triangles(){
 
     //2.连续三个点一个三角形
     glBegin(GL_TRIANGLE_STRIP);
-    glColor3f(0.0f,0.5f,0.0f); //画笔颜色
+    glColor3f(0.0f, 0.5f, 0.0f); //画笔颜色
     glVertex2f(0.0f, 0.65f);//A
     glVertex2f(0.0f, 0.85f);//B
     glVertex2f(0.1f, 0.65f);//C
@@ -134,7 +135,7 @@ void triangles(){
 
     //3.以第一个点为中心,剩下连续两个点为一个三角形
     glBegin(GL_TRIANGLE_FAN);
-    glColor3f(0.0f,0.2f,0.0f); //画笔颜色
+    glColor3f(0.0f, 0.2f, 0.0f); //画笔颜色
     glVertex2f(0.0f, 0.45f);//中心 A
 
     glVertex2f(-0.1f, 0.6f);//B
@@ -150,19 +151,20 @@ void triangles(){
 
 
 }
+
 /**
  * 四边形
  */
-void quads(){
+void quads() {
     //1.一个四边形显然要四个点
     glBegin(GL_QUADS);
-    glColor3f(0.5f,0.0f,0.0f); //画笔颜色
+    glColor3f(0.5f, 0.0f, 0.0f); //画笔颜色
     glVertex2f(0.5f, 0.8f);//A
     glVertex2f(0.5f, 0.7f);//B
     glVertex2f(0.6f, 0.7f);//C
     glVertex2f(0.6f, 0.8f);//D
     //ABCD
-    glColor3f(0.0f,0.0f,0.5f);
+    glColor3f(0.0f, 0.0f, 0.5f);
     glVertex2f(0.7f, 0.6f);//E
     glVertex2f(0.7f, 0.5f);//F
     glVertex2f(0.6f, 0.5f);//G
@@ -185,13 +187,13 @@ void quads(){
     //EFHG 注意顺序!!
     glEnd();
 }
+
 /**
  * 主要的绘制函数
  * 因为这个程序是静态而且没有交互，所以只要这一个函数就行
  * @return
  */
-void Display(void)
-{
+void Display(void) {
     glClear(GL_COLOR_BUFFER_BIT);
     grid();
     line();
@@ -200,13 +202,12 @@ void Display(void)
     glFlush();//注意，和写文件一样有缓冲区的，要更新才能真正的显示
 }
 
-int main(int argc,char* argv[])
-{
+int main(int argc, char *argv[]) {
     //一些初始化窗口和opengl的函数
-    glutInit(&argc,argv);
+    glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB);
-    glutInitWindowPosition(200,200);
-    glutInitWindowSize(800,800);
+    glutInitWindowPosition(200, 200);
+    glutInitWindowSize(800, 800);
     glutCreateWindow("The Second Shapes");
     glutDisplayFunc(&Display);
     glutMainLoop();
