@@ -7,13 +7,21 @@
 
 > 代码在src文件夹下，各个代码的简要说明在下面
 
-* basic 基础
+* basic 基础,这一部分只涉及opengl的各类API的使用和简单示例,不包括各种算法和事件,动画等.复杂度依次递增,而且没有覆盖所有的API
   * `point.cpp` 一个点
   * `lineandshape.cpp` 利用**opengl的API**画线和三角形,四边形等
+  * `array.cpp` 使用数组绘制
+*  event 事件,opengl规范只提供了显示相关的API,事件使用freeglut实现,[文档在这](http://freeglut.sourceforge.net/docs/api.php)
+  * 鼠标键盘
+    * todo
+  * 时间定时器
+    * todo
+  * 窗口回调
+    * todo
 
-## Build
+## Building
 
-整个项目使用**cmake**构建，按照传统的cmake编译流程编译就行，需要用到的外部库有`opengl`，`glew`，`freeglut`.
+整个项目使用**cmake**构建，按照传统的cmake编译流程编译就行，需要用到的外部库有`opengl`，`freeglut`.
 
 在Ubuntu 1804和Windows 10 下都测试通过。
 
@@ -21,14 +29,28 @@
 
 ### Linux
 
+先安装外部库,ubuntu 下运行:
+
+```
+sudo apt-get install -y libglew-dev freeglut3-dev libgl1-mesa-dev
+```
+
+注意Ubuntu版本要高于或等于16.04
+
+测试环境,先手动编译point.cpp测试下库是否安装正确
+
+```
+g++ ./src/basic/point.cpp -lGL -lglut -lGLU -o point
+```
+
+没报错说明正常,然后执行:
+
 ```bash
 cmake ./
 make
 ```
 
 完事
-
-
 
 ### Window
 
@@ -40,7 +62,15 @@ cmake -G "Visual Studio 15"
 
 然后在VS2017打开生成的解决方案文件，构建就行. 
 
+## 开发
 
+现在主流的C/C++的IDE都支持直接打开和解析cmake项目,这个仓库使用Clion ~~(学生免费:)~~进行开发的,直接`File -> Import Project`  选择这个库的根目录即可.
+
+## 资料
+
+教材<计算机图形学(第四版)>,直接从3.5开始看:(
+
+opengl官网wiki
 
 ## Screenshot
 

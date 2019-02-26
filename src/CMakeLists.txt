@@ -1,5 +1,6 @@
 add_executable(point basic/point.cpp)
-target_link_libraries(point GLU GL glut GLEW)
-
+target_link_libraries(point GLU GL glut )
 add_executable(lineandshape basic/lineandshape.cpp)
-target_link_libraries(lineandshape GLU GL glut GLEW)
+target_link_libraries(lineandshape GLU GL glut )
+add_executable(array basic/array.cpp)
+target_link_libraries(array GLU GL glut )
