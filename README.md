@@ -7,11 +7,12 @@
 
 > 代码在src文件夹下，各个代码的简要说明在下面
 
-* basic 基础,这一部分只涉及opengl的各类API的使用和简单示例,不包括各种算法和事件,动画等.复杂度依次递增,而且没有覆盖所有的API
+* basic 基础,这一部分只涉及opengl,glut,glew的各类API的使用和简单示例,不包括各种算法和事件,动画等.复杂度依次递增,而且没有覆盖所有的API
   * `point.cpp` 一个点
   * `lineandshape.cpp` 利用**opengl的API**画线和三角形,四边形等
   * `array.cpp` 使用数组绘制
-*  event 事件,opengl规范只提供了显示相关的API,事件使用freeglut实现,[文档在这](http://freeglut.sourceforge.net/docs/api.php)
+  * `simpleshader.cpp` 简单着色器示例 
+* event 事件,opengl规范只提供了显示相关的API,事件使用freeglut实现,[文档在这](http://freeglut.sourceforge.net/docs/api.php)
   * 鼠标键盘
     * todo
   * 时间定时器
@@ -23,7 +24,16 @@
 
 整个项目使用**cmake**构建，按照传统的cmake编译流程编译就行，需要用到的外部库有`opengl`，`freeglut`.
 
-在Ubuntu 1804和Windows 10 下都测试通过。
+在Ubuntu 18.04和Windows 10 下都测试通过。
+
+我的环境为
+```
+OpenGL实现厂商的名字：NVIDIA Corporation
+渲染器标识符：GeForce 940M/PCIe/SSE2
+OOpenGL实现的版本号：4.6.0 NVIDIA 390.48
+OGLU工具库版本：1.3
+glutGet(GLUT_VERSION) == 30000
+```
 
 下面是具体的编译流程
 
