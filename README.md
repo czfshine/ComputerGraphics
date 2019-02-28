@@ -14,7 +14,8 @@
   * `simpleshader.cpp` 简单着色器示例 
 * event 事件,opengl规范只提供了显示相关的API,事件使用freeglut实现,[文档在这](http://freeglut.sourceforge.net/docs/api.php)
   * 动画/时间定时器
-    * animation1.cpp 一个最最简单的动画示例了
+    * `animation1.cpp` 一个最最简单的动画示例了
+    * `animation2.cpp` 最简单的定时器做的时针
   * 鼠标键盘
     * todo
   * 窗口回调
