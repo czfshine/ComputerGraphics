@@ -1,4 +1,7 @@
+[![Build Status](https://travis-ci.org/czfshine/ComputerGraphics.svg?branch=master)](https://travis-ci.org/czfshine/ComputerGraphics)
+
 # ComputerGraphics
+
 一些计算机图形学相关的代码，主要内容是在学<计算机图形学>这门课和opengl的过程中的一些代码片段和程序。
 
 
