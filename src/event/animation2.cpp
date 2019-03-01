@@ -1,3 +1,7 @@
+#include <cmath>
+
+#include <cmath>
+
 // 最简单的定时器的使用定时器
 // Created by czfshine on 19-2-28.
 //
@@ -26,7 +30,7 @@ void showsecond(char s){
     double a=2*3.1415*s/60;
     glBegin(GL_LINES);
     glVertex2f(0.0f,0.0f);
-    glVertex2f((size-0.05)*sin(a),(size-0.05)*cos(a));
+    glVertex2f(static_cast<GLfloat>((size - 0.05) * sin(a)), static_cast<GLfloat>((size - 0.05) * cos(a)));
     glEnd();
 }
 /**
@@ -40,7 +44,7 @@ void showminute(char m,char s){
     a+= 2*3.1415*s/3600;
     glBegin(GL_LINES);
     glVertex2f(0.0f,0.0f);
-    glVertex2f((size-0.15)*sin(a),(size-0.15)*cos(a));
+    glVertex2f(static_cast<GLfloat>((size - 0.15) * sin(a)), static_cast<GLfloat>((size - 0.15) * cos(a)));
     glEnd();
 }
 //时针就不用了:)
@@ -49,7 +53,7 @@ void callback(int value){
     glClear(GL_COLOR_BUFFER_BIT );
     showpane();
     showsecond(value%60);
-    showminute(value/60,value%60);
+    showminute(static_cast<char>(value / 60), static_cast<char>(value % 60));
     //glFlush();
     glutSwapBuffers();
     glutTimerFunc(1000,callback,value+1);
@@ -59,7 +63,7 @@ void showpane() {
     glLineWidth(2);
     glBegin(GL_LINE_STRIP);
     for(float a=0.0f;a<=3.1415926*2+0.1;a+=0.05)
-        glVertex2f(size*sin(a),size*cos(a));
+        glVertex2f(static_cast<GLfloat>(size * std::sin(a)), static_cast<GLfloat>(size * std::cos(a)));
     glEnd();
 }
 
