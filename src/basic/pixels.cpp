@@ -21,8 +21,8 @@
 #include <GL/glut.h>
 #include <cstdio>
 
-#define H 800
-#define W 800
+#define H 500
+#define W 500
 
 /**
  * 生成(x,y)位置对应的颜色
@@ -95,6 +95,7 @@ void getcolor2(int x,int y, float *r, float*g, float*b) {
     }
 }
 */
+float data[H][W][3] = { 0 }; //防止栈溢出
 /**
  * 主要的绘制函数
  * 因为这个程序是静态而且没有交互，所以只要这一个函数就行
@@ -104,7 +105,7 @@ void Display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
     //我们的数组
-    float data[H][W][3]={0};
+   
     auto * p= reinterpret_cast<float *>(data);
     for (int i = 0; i < H*W * 3; i+=3) {
         int x=i%(W*3)/3;
@@ -124,7 +125,7 @@ int main(int argc,char* argv[])
     glutInit(&argc,argv);
     glutInitDisplayMode(GLUT_RGB);
     glutInitWindowPosition(200,200);
-    glutInitWindowSize(800,800);
+    glutInitWindowSize(500,500);
     glutCreateWindow("Pixels");
     glutDisplayFunc(&Display);
     glutMainLoop();
