@@ -11,3 +11,17 @@ CTestTestfile.cmake
 cmake-build-debug/
 
 \.idea/
+.vs/
+*.vcxproj
+*.filters
+*.user
+*.cbp
+*.sln
+Debug/
+lib/
+Release/
+*.exe
+*.manifest
+*.ilk
+*.pdb
+*.dll

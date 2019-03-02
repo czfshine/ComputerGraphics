@@ -68,7 +68,13 @@ make
 
 ### Window
 
-先配置外部库，再生成Visual Studio 2017 的解决方案文件：
+* 先配置外部库，参考[这个文档](./doc/Window平台下配置必需的库.md) .
+
+* 然后安装cmake（最新版的），然后在开始菜单内点`cmake  gui` 打开cmake的图形界面
+
+* 配置如下：
+
+  ​
 
 ```bash
 cmake -G "Visual Studio 15"

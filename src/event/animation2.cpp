@@ -13,6 +13,7 @@
 // 知道这个api,写代码就很简单了:)
 
 //下面画一个时钟
+#include <GL/glew.h>
 #include <GL/glut.h>
 #include <cmath>
 #include <cstdio>
