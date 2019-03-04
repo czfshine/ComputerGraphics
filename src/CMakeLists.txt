@@ -20,4 +20,5 @@ singlefile(event animation2)
 singlefile(basic pixels)
 #singlefile(textture)
 
+singlefile(design Lollipop)
 #target_link_libraries(textture X11)
