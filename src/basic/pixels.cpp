@@ -3,7 +3,7 @@
 //
 
 // 在之前的程序里都是用坐标表示图形,或者说都是矢量的
-// 下面就来画像素,不够个人并不推荐直接绘制屏幕的像素点,
+// 下面就来画像素,不过个人并不推荐直接绘制屏幕的像素点,
 // 考虑到不同执行环境,可能效果并没有在开发机上的好
 // 除非必要,否则不要使用
 // 先不涉及复杂的坐标系统,和缓存,全都以默认状态
@@ -38,7 +38,7 @@ void getcolor(int x,int y, float *r, float*g, float*b){
     *b=1.0*y/H;
 }
 
-//下面给出其他一些颜色函数,可忽略
+//下面给出其他一些颜色函数,可忽略，或者注释掉上面的getcolor函数使用下面的函数
 /*
 
 //计算迭代次数
@@ -95,7 +95,7 @@ void getcolor2(int x,int y, float *r, float*g, float*b) {
     }
 }
 */
-float data[H][W][3] = { 0 }; //防止栈溢出
+float data[H][W][3] = { 0 }; //放在外面防止栈溢出
 /**
  * 主要的绘制函数
  * 因为这个程序是静态而且没有交互，所以只要这一个函数就行
@@ -114,7 +114,7 @@ void Display(void)
         getcolor(x,y,p+i,p+i+1,p+i+2);
     }
     //画
-    glDrawPixels(W,H,GL_RGB,GL_FLOAT,p);
+    glDrawPixels(W,H,GL_RGB,GL_FLOAT,p);//rgb 模式，数据类型为浮点数
     //glutSwapBuffers();
     glFlush(); //注意，和写文件一样有缓冲区的，要更新才能真正的显示
 }

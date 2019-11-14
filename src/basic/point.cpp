@@ -13,9 +13,11 @@ void Display(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
     glPointSize(5.0f); //大小
+
     glBegin(GL_POINTS); //表明开始画点
     glVertex2f(0.5f,0.8f);//屏幕分为x（-1,1）y（-1,1）的矩形
     glEnd(); //表明结束绘画点，也就是可以画别的东西了
+
     glFlush(); //注意，和写文件一样有缓冲区的，要更新才能真正的显示
 }
 

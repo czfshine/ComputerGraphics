@@ -44,22 +44,28 @@ void Display(void)
     glEnable (GL_LINE_SMOOTH);
     glHint (GL_LINE_SMOOTH, GL_NICEST);
     glEnable(GL_MULTISAMPLE);
+    
     glClearColor(1,1,1,1);
     glClear(GL_COLOR_BUFFER_BIT);
     glPointSize(200);
     glColor3f(1, 214.0/255, 138.0/255);
+    
     float delta=0.0375/1.41;
     sector(-0.4,-0.4,0.0375,3.0/4.0*pi,7.0/4.0*pi);
+    
     glBegin(GL_POLYGON);
     glVertex2f(0.0+ delta,0.0-delta);
     glVertex2f(0.0- delta,0.0+delta);
     glVertex2f(-0.40- delta,-0.40+ delta);
     glVertex2f(-0.40+ delta,-0.40- delta);
     glEnd();
+    
     glColor3f(1,100.0/255,100.0/255);
     sector(0,0,0.2,3.0/4.0*pi,7.0/4.0*pi);
+    
     glColor3f(244.0/255,67.0/255,133.0/255);
     sector(0,0,0.2,7.0/4.0*pi,3.0/4.0*pi);
+    
     glutSwapBuffers();
 }
 
