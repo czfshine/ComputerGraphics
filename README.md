@@ -20,7 +20,7 @@
     * `animation1.cpp` 一个最最简单的动画示例了
     * `animation2.cpp` 最简单的定时器做的时针
   * 鼠标键盘
-    * todo
+    * `mouseclick.cpp` 鼠标点击事件
   * 窗口回调
     * todo
 
@@ -74,7 +74,7 @@ make
 
 * 配置如下：
 
-  ​
+  
 
 ```bash
 cmake -G "Visual Studio 15"
@@ -92,7 +92,11 @@ cmake -G "Visual Studio 15"
 
 opengl官网wiki和<OpenGl编程指南>.
 
+http://www.glprogramming.com/red/chapter01.html 1.1 版本的
+
 <计算机视觉中的数学方法> 补数学基础的.质量还行，主要是学校图书馆关于计算机图形学的书不多，而且混杂在一堆讲Photoshop的书里面。
+
+http://ogldev.atspace.co.uk/ step by step的教程，有部分中文翻译。
 
 ## Screenshot
 

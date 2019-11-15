@@ -17,6 +17,7 @@ singlefile(basic array)
 #singlefile(basic simpleshaper)
 singlefile(event animation1)
 singlefile(event animation2)
+singlefile(event mouseclick)
 singlefile(basic pixels)
 #singlefile(textture)
 
