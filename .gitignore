@@ -25,3 +25,5 @@ Release/
 *.ilk
 *.pdb
 *.dll
+
+data/
