@@ -22,5 +22,6 @@ singlefile(event mouseclick)
 singlefile(basic pixels)
 #singlefile(textture)
 
+singlefile(app control)
 singlefile(design Lollipop)
 #target_link_libraries(textture X11)
