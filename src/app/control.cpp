@@ -231,7 +231,7 @@ void upKey(unsigned char key,int x,int y){
     if(key==' '){
         if(inZoom){
             inZoom=!inZoom;
-            glLoadIdentity()
+            glLoadIdentity();
             glOrtho(-5, 5, -5, 5, 0, 15);
             glutPostRedisplay();
         }
